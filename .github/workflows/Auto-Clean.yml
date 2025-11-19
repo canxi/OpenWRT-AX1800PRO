@@ -5,7 +5,7 @@ name: Auto-Clean
 #   schedule:
 #     - cron: 0 22 * * 0
 on:
-  #自动编译：当Auto-Clean运行完成后
+  #自动编译：当Cache-Clean运行完成后
   workflow_run:
     workflows: ["Cache-Clean"]
     types:
@@ -33,6 +33,7 @@ jobs:
           delete_tags: false
           delete_workflows: true
           workflows_keep_day: 0
+
 
 
 
